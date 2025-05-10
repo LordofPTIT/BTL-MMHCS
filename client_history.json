@@ -1,0 +1,138 @@
+[
+    {
+        "timestamp": "2025-05-10 11:21:40",
+        "type": "text",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "alo alo 1234 alo",
+        "status": "Đã gửi (chờ ACK server)",
+        "_full_text_for_display": "alo alo 1234 alo"
+    },
+    {
+        "timestamp": "2025-05-10 10:54:52",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "N-Puzzle-AI.zip",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/N-Puzzle-AI.zip"
+    },
+    {
+        "timestamp": "2025-05-10 10:53:51",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "minigame.docx",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/minigame.docx"
+    },
+    {
+        "timestamp": "2025-05-10 10:53:31",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "minigame.docx",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/minigame.docx"
+    },
+    {
+        "timestamp": "2025-05-10 10:52:32",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "000067.JPG",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/Ảnh tào lao/Background roll/000067.JPG"
+    },
+    {
+        "timestamp": "2025-05-10 10:47:25",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "000067.JPG",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/Ảnh tào lao/Background roll/000067.JPG"
+    },
+    {
+        "timestamp": "2025-05-10 10:43:56",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "minigame.docx",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/minigame.docx"
+    },
+    {
+        "timestamp": "2025-05-10 10:43:16",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "BTL-Python.rar",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/3/BTL-Python.rar"
+    },
+    {
+        "timestamp": "2025-05-10 10:40:55",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "000067.JPG",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/Ảnh tào lao/Background roll/000067.JPG"
+    },
+    {
+        "timestamp": "2025-05-10 10:30:20",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "000067.JPG",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/Ảnh tào lao/Background roll/000067.JPG"
+    },
+    {
+        "timestamp": "2025-05-10 10:16:46",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "000067.JPG",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/Ảnh tào lao/Background roll/000067.JPG"
+    },
+    {
+        "timestamp": "2025-05-09 22:22:27",
+        "type": "file",
+        "direction": "received",
+        "partner": "lethinh",
+        "details": "20250509222226799400_Screenshot 2025-04-25 133511.png.gpg",
+        "status": "File mã hóa bị mất",
+        "encrypted_path": "D:\\PythonProject3\\received_files\\enc_recv_20250509222227081450_20250509222226799400_Screenshot 2025-04-25 133511.png.gpg",
+        "path": "D:\\PythonProject3\\received_files\\20250509222226799400_Screenshot 2025-04-25 133511.png.gpg"
+    },
+    {
+        "timestamp": "2025-05-09 00:08:35",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "BTL-Python.rar",
+        "status": "Gửi thất bại: Failed to deliver file to mmhcs (socket error).",
+        "path": "D:/3/BTL-Python.rar"
+    },
+    {
+        "timestamp": "2025-05-09 00:07:23",
+        "type": "text",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "alo alo 1234 alo",
+        "status": "Đã gửi (chờ ACK)",
+        "_full_text_for_display": "alo alo 1234 alo"
+    },
+    {
+        "timestamp": "2025-05-09 00:06:20",
+        "type": "file",
+        "direction": "sent",
+        "partner": "mmhcs",
+        "details": "Screenshot 2025-04-25 133511.png",
+        "status": "Chờ xác nhận server...",
+        "path": "D:/One Drive/OneDrive/Hình ảnh/Screenshots/Screenshot 2025-04-25 133511.png"
+    }
+]
