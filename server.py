@@ -143,14 +143,14 @@ def handle_client(conn, addr):
                     file_size = file_info['total_size']
                     bytes_to_receive_now = min(BUFFER_SIZE, file_size - file_info['bytes_received'])
 
-                    if bytes_to_receive_now <= 0:  # Should be caught by previous check, but as safeguard
+                    if bytes_to_receive_now <= 0:
                         logging.info(
                             f"File {file_info['filename']} already fully received based on bytes_to_receive_now calculation.")
 
                         if file_info['bytes_received'] >= file_size:
 
                             pass
-                        else:  
+                        else:
                             logging.error(f"Logical error in file receive loop for {file_info['filename']}")
                             if os.path.exists(temp_filename_on_server):
                                 try:
@@ -298,7 +298,7 @@ def handle_client(conn, addr):
                                     if first_brace_at == -1: first_brace_at = i
                                 continue
 
-                            if first_brace_at == -1: continue  # Should not happen if json_started_flag is true
+                            if first_brace_at == -1: continue
 
                             if escape_next_char:
                                 escape_next_char = False
