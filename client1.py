@@ -1158,7 +1158,7 @@ class PGPClientGUI:
                 self._update_history_entry_status_by_encrypted_path(encrypted_path, "Lỗi: File mã hóa không tồn tại")
                 return
 
-            # Log private key hiện có
+
             priv_keys = [k['fingerprint'] for k in self.gpg.list_keys(True)]
             self._log_message(f"[LOG] Private keys hiện có: {priv_keys}", "DEBUG_VERBOSE")
 
@@ -1174,14 +1174,14 @@ class PGPClientGUI:
                 decrypted_path = f"{base_path}_{counter}{ext}"
                 counter += 1
 
-            # Log kích thước file mã hóa trước khi giải mã
+
             try:
                 enc_size = os.path.getsize(encrypted_path)
                 self._log_message(f"[LOG] Kích thước file mã hóa trước khi giải mã: {enc_size} bytes", "DEBUG_VERBOSE")
             except Exception as e:
                 self._log_message(f"[LOG] Không thể lấy kích thước file mã hóa: {e}", "WARNING")
 
-            # Yêu cầu passphrase nếu cần
+
             passphrase = None
             need_passphrase = False
             for key in self.gpg.list_keys(True):
@@ -1206,7 +1206,7 @@ class PGPClientGUI:
                     with open(decrypted_path, 'wb') as df:
                         df.write(decrypted_data.data)
 
-                    # Log kích thước file sau khi giải mã
+
                     try:
                         dec_size = os.path.getsize(decrypted_path)
                         self._log_message(f"[LOG] Kích thước file sau khi giải mã: {dec_size} bytes", "DEBUG_VERBOSE")
@@ -1228,13 +1228,6 @@ class PGPClientGUI:
         except Exception as e:
             self._log_message(f"Lỗi xử lý file mã hóa {encrypted_path}: {e}", "ERROR")
             self._update_history_entry_status_by_encrypted_path(encrypted_path, f"Lỗi xử lý: {e}")
-        # KHÔNG xóa file .gpg sau khi giải mã, để giữ lại file mã hóa gốc
-        # finally:
-        #     try:
-        #         if os.path.exists(encrypted_path):
-        #             os.remove(encrypted_path)
-        #     except:
-        #         pass
 
     def _send_file_action(self):
         if not self.is_connected:
@@ -1279,7 +1272,7 @@ class PGPClientGUI:
         orig_basename = os.path.basename(file_to_send_path)
         timestamp_sent = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-        # Log kích thước file gốc
+
         try:
             file_size = os.path.getsize(file_to_send_path)
             self._log_message(f"[LOG] Kích thước file gốc: {file_size} bytes", "DEBUG_VERBOSE")
@@ -1308,7 +1301,7 @@ class PGPClientGUI:
                 status = self.gpg.encrypt_file(f_in, recipients=[recipient_gpg], output=enc_temp_fpath,
                                                always_trust=True)
 
-            # Log kích thước file mã hóa
+
             if os.path.exists(enc_temp_fpath):
                 enc_size = os.path.getsize(enc_temp_fpath)
                 self._log_message(f"[LOG] Kích thước file mã hóa: {enc_size} bytes", "DEBUG_VERBOSE")
@@ -1563,7 +1556,7 @@ class PGPClientGUI:
                 self._log_message(msg, "WARNING")
                 return
 
-            # Kiểm tra danh sách khóa
+
             public_keys = self.gpg.list_keys()
             secret_keys = self.gpg.list_keys(True)
 
@@ -1778,7 +1771,7 @@ class PGPClientGUI:
                 if import_result.count == 1:
                     key_id = import_result.fingerprints[0]
 
-                    # Kiểm tra xem key đã tồn tại chưa
+
                     if any(k.get("key_id") == key_id for k in self.saved_recipient_keys):
                         messagebox.showerror(
                             "Lỗi",
@@ -1954,7 +1947,7 @@ class PGPClientGUI:
                 if timestamp_match and entry.get("timestamp") == timestamp_match:
                     found_entry = entry
                     break
-                elif not timestamp_match and found_entry is None:  # Ưu tiên entry mới nhất nếu không có timestamp_match
+                elif not timestamp_match and found_entry is None:
                     found_entry = entry
         if found_entry:
             found_entry["status"] = new_status
@@ -2011,7 +2004,7 @@ class PGPClientGUI:
         item_values_tuple = self.history_tree.item(selected_item_iid, 'values')
         if not item_values_tuple or len(item_values_tuple) < 7: return
 
-        item_values = list(item_values_tuple)  # Chuyển tuple sang list để dễ truy cập
+        item_values = list(item_values_tuple)
         timestamp, item_type, direction, partner, details, status, path_val = item_values[0], item_values[1], \
         item_values[
             2], item_values[3], item_values[4], item_values[5], item_values[6]
@@ -2295,7 +2288,7 @@ class PGPClientGUI:
         if not out_path:
             return
 
-        # Thực hiện giải mã
+        
         try:
             with open(file_path, 'rb') as f_in:
                 result = self.gpg.decrypt_file(f_in, output=out_path)
