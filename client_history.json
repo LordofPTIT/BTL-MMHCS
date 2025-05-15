@@ -1,5 +1,50 @@
 [
     {
+        "timestamp": "2025-05-11 23:42:02",
+        "type": "file",
+        "direction": "sent",
+        "partner": "MMHCS",
+        "details": "lab2025.zip",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/lab2025.zip"
+    },
+    {
+        "timestamp": "2025-05-11 23:37:19",
+        "type": "file",
+        "direction": "sent",
+        "partner": "MMHCS",
+        "details": "Đề 02-04-2025.docx",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/Gia sư/Hóa 12 2k7/Các thứ đề/Đề 02-04-2025.docx"
+    },
+    {
+        "timestamp": "2025-05-11 23:32:01",
+        "type": "file",
+        "direction": "sent",
+        "partner": "MMHCS",
+        "details": "ponyo038.jpg",
+        "status": "Chờ server xác nhận chuyển tiếp...",
+        "path": "D:/Ảnh tào lao/Background roll/ponyo038.jpg"
+    },
+    {
+        "timestamp": "2025-05-11 23:28:19",
+        "type": "text",
+        "direction": "sent",
+        "partner": "MMHCS",
+        "details": "Đây là Trần Ngọc Minh Hiếu, mã sinh viên B22DCAT123",
+        "status": "Đã gửi (chờ ACK server)",
+        "_full_text_for_display": "Đây là Trần Ngọc Minh Hiếu, mã sinh viên B22DCAT123"
+    },
+    {
+        "timestamp": "2025-05-11 23:27:21",
+        "type": "text",
+        "direction": "sent",
+        "partner": "MMHCS",
+        "details": "Alo đây là Trần Ngọc Minh Hiếu, mã sinh viên B22DCAT123",
+        "status": "Đã gửi (chờ ACK server)",
+        "_full_text_for_display": "Alo đây là Trần Ngọc Minh Hiếu, mã sinh viên B22DCAT123"
+    },
+    {
         "timestamp": "2025-05-10 11:21:40",
         "type": "text",
         "direction": "sent",

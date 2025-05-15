@@ -146,15 +146,11 @@ def handle_client(conn, addr):
                     if bytes_to_receive_now <= 0:  # Should be caught by previous check, but as safeguard
                         logging.info(
                             f"File {file_info['filename']} already fully received based on bytes_to_receive_now calculation.")
-                        # Proceed to forwarding, this state indicates it should have been processed
-                        # This might happen if the previous chunk exactly completed the file
-                        # and this is the next iteration of the loop.
-                        # The actual forwarding logic is below.
-                        # For safety, we will re-trigger the forwarding logic if it's truly complete.
+
                         if file_info['bytes_received'] >= file_size:
-                            # Fall through to the forwarding logic block
-                            pass  # Let the logic below handle it
-                        else:  # Should not happen if bytes_to_receive_now is <=0
+
+                            pass
+                        else:  
                             logging.error(f"Logical error in file receive loop for {file_info['filename']}")
                             if os.path.exists(temp_filename_on_server):
                                 try:
